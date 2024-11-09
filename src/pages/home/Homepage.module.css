@@ -1,0 +1,56 @@
+.banner {
+  background-image: url(./banner.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 1000px;
+}
+
+.bannerOverlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.banner:hover .bannerOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.shippingBannerContainer {
+  display: flex;
+  justify-content: center;
+  height: 70px;
+  background-color: var(--primary);
+  transition: 0.2s;
+}
+
+.shippingBannerContainer:hover {
+  height: 90px;
+}
+
+.shippingBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.shippingBanner p {
+  align-self: center;
+  font-weight: 700;
+  font-size: 14px;
+  margin: 0;
+}
+
+#smallerText {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.test {
+  height: 1000px;
+}

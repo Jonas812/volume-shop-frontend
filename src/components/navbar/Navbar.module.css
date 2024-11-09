@@ -1,0 +1,89 @@
+.headerContainer {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  display: inline-block;
+}
+
+.navbarContainer {
+  background-color: var(--secondary);
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 30px;
+  width: 105px;
+}
+
+.navbarTextContainer {
+  display: flex;
+  gap: 30px;
+
+  height: 70px;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.navbarText {
+  list-style: none;
+  text-decoration: none;
+
+  color: var(--text);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.navbarIconContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 30px;
+  margin-right: 30px;
+}
+
+.navbarIcon {
+  width: 24;
+}
+
+.iconBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.kategorieContainer {
+  display: flex;
+  background-color: var(--background);
+
+  width: 100%;
+  z-index: 10000;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.kategoriesBox {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-left: 10%;
+}
+
+.categoryNameBox {
+  width: 105px;
+  margin-left: 30px;
+}
+
+.categorieHr {
+  border-top: 1px solid var(--text);
+  border-bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
