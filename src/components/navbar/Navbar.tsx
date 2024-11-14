@@ -35,19 +35,29 @@ const categories: Category[] = [
         categoryName: "Beachwear"
     },
     {
-        gender: "WOMAN",
+        gender: "WOMEN",
         categoryRoute: "/women/headwear",
         categoryName: "Headwear"
     },
     {
-        gender: "WOMAN",
+        gender: "WOMEN",
         categoryRoute: "/women/shirts",
         categoryName: "Shirts"
     },
     {
-        gender: "WOMAN",
+        gender: "WOMEN",
         categoryRoute: "/women/knits",
         categoryName: "Knits"
+    },
+    {
+        gender: "ACCESOIRES",
+        categoryRoute: "/accesoires/glasses",
+        categoryName: "Glasses"
+    },    
+    {
+        gender: "ACCESOIRES",
+        categoryRoute: "/accesoires/jewelry",
+        categoryName: "Jewelry"
     }
 ];
 
@@ -89,17 +99,18 @@ const Navbar = () => {
                     <Link 
                         to="/women" 
                         className={styles.navbarText} 
-                        onMouseEnter={() => handleMouseEnter('WOMAN')} 
+                        onMouseEnter={() => handleMouseEnter('WOMEN')} 
                         onMouseLeave={handleMouseLeave}
                     >
-                        WOMAN
+                        WOMEN
                     </Link>
                     <Link 
-                        to="/shows" 
+                        to="/accesoires" 
                         className={styles.navbarText}
-                        onMouseEnter={handleCategoryMouseLeave}
+                        onMouseEnter={() => handleMouseEnter('ACCESOIRES')} 
+                        onMouseLeave={handleMouseLeave}
                     >
-                        SHOWS
+                        ACCESOIRES
                     </Link>
                 </div>
 
