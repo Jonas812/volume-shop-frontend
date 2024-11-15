@@ -4,15 +4,20 @@ import { useLocation } from 'react-router-dom';
 
 const ProductsGrid = () => {
     const location = useLocation();
-  
-    const currentPath = location.pathname
+
+    const currentPath = location.pathname //TOTO WICHTIG FÜR ANFRAGE ANS BACKEND
 
 
     return (
-        <div>
-            <p>test</p> //TODO BUG 
-            <p>test</p>
-            {currentPath}
+        <div id={styles.productsGridContainer}>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
+            <ProductTile></ProductTile>
             <ProductTile></ProductTile>
             <ProductTile></ProductTile>
             <ProductTile></ProductTile>

@@ -4,18 +4,18 @@ import Homepage from "./pages/home/Homepage"
 import ProductsGrid from "./components/producsGrid/ProductsGrid"
 
 function App() {
-  
+
   return (
     <>
       <Navbar />
-      <div>
-    <Routes>
-        <Route path="/"  element={<Homepage/>}/>
-        <Route path="/men/*"  element={<ProductsGrid/>}/>
-        <Route path="/women/*"  element={<ProductsGrid/>}/>
-        <Route path="/accesoires/*"  element={<ProductsGrid/>}/>
-    </Routes>
-    </div>
+      <div id="content">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/men/*" element={<ProductsGrid />} />
+          <Route path="/women/*" element={<ProductsGrid />} />
+          <Route path="/accesoires/*" element={<ProductsGrid />} />
+        </Routes>
+      </div>
     </>
   )
 }

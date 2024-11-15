@@ -13,10 +13,15 @@
 
   display: flex;
   align-items: center;
+
+  padding: 0 30px;
 }
 
-.logo {
-  margin-left: 30px;
+#logoContainer {
+  width: 305px;
+}
+
+#logo {
   width: 105px;
 }
 
@@ -26,7 +31,6 @@
 
   height: 70px;
   align-items: center;
-  margin-left: 200px;
 }
 
 .navbarText {
@@ -43,7 +47,6 @@
   justify-content: flex-end;
   width: 100%;
   gap: 30px;
-  margin-right: 30px;
 }
 
 .navbarIcon {
@@ -58,33 +61,23 @@
 
 .kategorieContainer {
   display: flex;
+  height: 50px;
+  border-bottom: 1px solid var(--text);
+  padding: 0 30px;
   background-color: var(--background);
 
   width: 100%;
   z-index: 10000;
 }
 
-.flexColumn {
-  display: flex;
-  flex-direction: column;
-}
-
 .kategoriesBox {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-left: 10%;
 }
 
-.categoryNameBox {
-  width: 105px;
-  margin-left: 30px;
-}
-
-.categorieHr {
-  border-top: 1px solid var(--text);
-  border-bottom: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+#categoryNameBox {
+  display: flex;
+  align-items: center;
+  width: 305px;
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface Category {
     gender?: string;
@@ -53,7 +53,7 @@ const categories: Category[] = [
         gender: "ACCESOIRES",
         categoryRoute: "/accesoires/glasses",
         categoryName: "Glasses"
-    },    
+    },
     {
         gender: "ACCESOIRES",
         categoryRoute: "/accesoires/jewelry",
@@ -80,34 +80,39 @@ const Navbar = () => {
         setHoveredText(null); // Zurücksetzen des gehoverten Texts
     };
 
+    const location = useLocation();
+    const currentPath = location.pathname
+
     return (
         <div className={styles.headerContainer}>
             <div className={styles.navbarContainer}>
                 <Link to="/" onMouseEnter={handleCategoryMouseLeave}>
-                    <img src="./public/volume.svg" alt="volume" className={styles.logo} />
+                    <div id={styles.logoContainer}>
+                        <img src="./volume.svg" alt="volume" id={styles.logo} />
+                    </div>
                 </Link>
 
                 <div className={styles.navbarTextContainer}>
-                    <Link 
-                        to="/men" 
-                        className={styles.navbarText} 
-                        onMouseEnter={() => handleMouseEnter('MEN')} 
+                    <Link
+                        to="/men"
+                        className={styles.navbarText}
+                        onMouseEnter={() => handleMouseEnter('MEN')}
                         onMouseLeave={handleMouseLeave}
                     >
                         MEN
                     </Link>
-                    <Link 
-                        to="/women" 
-                        className={styles.navbarText} 
-                        onMouseEnter={() => handleMouseEnter('WOMEN')} 
+                    <Link
+                        to="/women"
+                        className={styles.navbarText}
+                        onMouseEnter={() => handleMouseEnter('WOMEN')}
                         onMouseLeave={handleMouseLeave}
                     >
                         WOMEN
                     </Link>
-                    <Link 
-                        to="/accesoires" 
+                    <Link
+                        to="/accesoires"
                         className={styles.navbarText}
-                        onMouseEnter={() => handleMouseEnter('ACCESOIRES')} 
+                        onMouseEnter={() => handleMouseEnter('ACCESOIRES')}
                         onMouseLeave={handleMouseLeave}
                     >
                         ACCESOIRES
@@ -116,36 +121,36 @@ const Navbar = () => {
 
                 <div className={styles.navbarIconContainer}>
                     <button className={styles.iconBtn} onMouseEnter={handleCategoryMouseLeave}>
-                        <img src="./public/searchIcon.svg" alt="search" className={styles.navbarIcon} />
+                        <img src="./searchIcon.svg" alt="search" className={styles.navbarIcon} />
                     </button>
 
                     <Link to="/cart" onMouseEnter={handleCategoryMouseLeave}>
-                        <img src="./public/cartIcon.svg" alt="cart" className={styles.navbarIcon} />
+                        <img src="./cartIcon.svg" alt="cart" className={styles.navbarIcon} />
+                    </Link>
+
+                    <Link to="/profile" onMouseEnter={handleCategoryMouseLeave}>
+                        <img src="./userIcon.svg" alt="profile" className={styles.navbarIcon} />
                     </Link>
                 </div>
             </div>
             {(hoveredText || isHoveringCategory) && (
-                <span className={styles.flexColumn}>
-                    <div 
-                        className={styles.kategorieContainer}
-                        onMouseEnter={handleCategoryMouseEnter}
-                        onMouseLeave={handleCategoryMouseLeave}>
-                        <p className={styles.categoryNameBox}>{hoveredText}</p>
+                <div
+                    className={styles.kategorieContainer}
+                    onMouseEnter={handleCategoryMouseEnter}
+                    onMouseLeave={handleCategoryMouseLeave}>
+                    <span id={styles.categoryNameBox}>{currentPath.slice(1)}</span>
 
-                            <div className={styles.kategoriesBox}>
-                                {categories
-                                .filter(category => category.gender === hoveredText)
-                                .map((category, index) => (
-                                    <Link key={index} to={category.categoryRoute as string} className={styles.navbarText}>
-                                        {category.categoryName}
-                                    </Link>
-                                    ))
-                                }
-                            </div>
+                    <div className={styles.kategoriesBox}>
+                        {categories
+                            .filter(category => category.gender === hoveredText)
+                            .map((category, index) => (
+                                <Link key={index} to={category.categoryRoute as string} className={styles.navbarText}>
+                                    {category.categoryName}
+                                </Link>
+                            ))
+                        }
                     </div>
-                    
-                    <hr className={styles.categorieHr}></hr>
-                </span>
+                </div>
             )}
         </div>
     );
