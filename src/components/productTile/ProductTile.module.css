@@ -1,22 +1,21 @@
 #productTileContainer {
-    width: 100%;
-    height: 590.67px;
-    background-color: #BDAC9E;
+  width: 100%;
+  background-color: #bdac9e;
 }
 
 #productInformationContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
 
-    margin: 5px;
+  margin: 5px;
 }
 
 #productInformationContainer span {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .productInformationRight {
-    text-align: right;
+  text-align: right;
 }

@@ -4,11 +4,11 @@ import styles from './ProductTile.module.css';
 const ProductTile = () => {
     return (
         <div>
-            <div id={styles.productTileContainer} />
+            <img src='pulloverKnit.png' id={styles.productTileContainer} />
             <div id={styles.productInformationContainer}>
-                <span>Mesh Pant</span>
+                <span>Raw Knit</span>
                 <span className={styles.productInformationRight}>332gs/m</span>
-                <span>Volume 2  Collection</span>
+                <span>Winter 2023</span>
                 <span className={styles.productInformationRight}>90€</span>
             </div>
         </div>
