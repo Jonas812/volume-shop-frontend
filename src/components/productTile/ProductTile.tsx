@@ -1,12 +1,16 @@
 import styles from './ProductTile.module.css';
 
 
-const ProductTile = () => {
+interface ProductTileProps {
+    productId: number; // productId muss vom Typ 'number' sein
+}
+
+const ProductTile: React.FC<ProductTileProps> = ({ productId }) => {
     return (
         <div>
             <img src='pulloverKnit.png' id={styles.productTileContainer} />
             <div id={styles.productInformationContainer}>
-                <span>Raw Knit</span>
+                <span>{productId}</span>
                 <span className={styles.productInformationRight}>332gs/m</span>
                 <span>Winter 2023</span>
                 <span className={styles.productInformationRight}>90€</span>

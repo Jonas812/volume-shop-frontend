@@ -1,29 +1,22 @@
 import styles from './ProductsGrid.module.css';
 import ProductTile from '../productTile/ProductTile';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import productService from '../../services/productService';
 
 const ProductsGrid = () => {
-    const { category } = useParams();
+    const [products, setProducts] = useState<any[]>([]);
     const location = useLocation();
 
-    const currentPath = location.pathname //TOTO WICHTIG FÜR ANFRAGE ANS BACKEND
+    const url: string = location.pathname;
 
+    const allProducts = productService.getAllProducts();
 
     return (
         <div id={styles.productsGridContainer}>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
-            <ProductTile></ProductTile>
+            {products.map((product) => (
+                <ProductTile productId={product.id}></ProductTile>
+            ))}
         </div>
     );
 };

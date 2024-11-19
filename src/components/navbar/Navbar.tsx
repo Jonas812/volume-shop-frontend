@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Navbar.module.css';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const navData = [
     {
@@ -23,31 +23,33 @@ const Navbar = () => {
     return (
         <div className={styles.headerContainer}>
             <div className={styles.navbarContainer}>
-                    <div id={styles.logoContainer}>
-                        <Link to="/">
-                            <img src="./volume.svg" 
-                            alt="volume" 
+                <div id={styles.logoContainer}>
+                    <Link to="/">
+                        <img src="./volume.svg"
+                            alt="volume"
                             id={styles.logo}
                             onMouseEnter={() => setCategory(null)} />
-                        </Link>
-                    </div>
+                    </Link>
+                </div>
 
                 <div className={styles.navbarTextContainer}>
-                {navData.map((item) => 
-                    <Link
-                    to={`${item.category.toLowerCase()}`}
-                    className={styles.navbarText}
-                    onMouseEnter={() => setCategory(item.category)}
-                >
-                    {item.category}
-                </Link>
-                )}
+                    {navData.map((item) =>
+                        <Link
+                            key={item.category} // Ensure each key is unique
+                            to={`${item.category.toLowerCase()}`}
+                            className={styles.navbarText}
+                            onMouseEnter={() => setCategory(item.category)}
+                        >
+                            {item.category}
+                        </Link>
+                    )}
+
                 </div>
 
                 <div id={styles.navbarIconContainer}
-                onMouseEnter={() => setCategory(null)}>
+                    onMouseEnter={() => setCategory(null)}>
                     <span id={styles.searchBox}>
-                        <input type="text" id={styles.searchInput}/>
+                        <input type="text" id={styles.searchInput} />
                         <img src="./searchIcon.svg" alt="search" className={styles.navbarIcon} />
                     </span>
 
@@ -68,17 +70,17 @@ const Navbar = () => {
                     <span id={styles.categoryNameBox}></span>
 
                     <div className={styles.kategoriesBox}>
-                    {navData
-                        .find((item) => item.category === category)
-                        ?.subCategories.map((subCategory, index) => (
-                            <Link
-                            key={index}
-                            to={`/${category.toLowerCase()}/${subCategory.toLowerCase().replace(/ /g, "-")}`}
-                            className={styles.navbarText}
-                            >
-                            {subCategory}
-                            </Link>
-                        ))}
+                        {navData
+                            .find((item) => item.category === category)
+                            ?.subCategories.map((subCategory, index) => (
+                                <Link
+                                    key={index}
+                                    to={`/${category.toLowerCase()}/${subCategory.toLowerCase().replace(/ /g, "-")}`}
+                                    className={styles.navbarText}
+                                >
+                                    {subCategory}
+                                </Link>
+                            ))}
                     </div>
                 </div>
             )}
