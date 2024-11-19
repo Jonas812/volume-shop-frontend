@@ -4,17 +4,16 @@ class ProductService {
   private baseUrl: string;
 
   constructor() {
-    this.baseUrl = 'http://localhost:3000/product';
+    this.baseUrl = "http://localhost:3000/product";
   }
 
-  // Methode, um alle Produkte zu holen
-  async getAllProducts() {
+  async getAllProducts(): Promise<any[]> {
     try {
-      const response = await axios.get('http://localhost:3000/product');
-      console.log(response.data);
+      const response = await axios.get(this.baseUrl);
+      return response.data;
     } catch (error) {
-      console.error('Error fetching all products:', error);
-      throw error; // Wir werfen den Fehler, damit er im Component-Code behandelt wird
+      console.error("Error fetching all products:", error);
+      throw error;
     }
   }
 }

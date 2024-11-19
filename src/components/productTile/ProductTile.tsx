@@ -2,7 +2,7 @@ import styles from './ProductTile.module.css';
 
 
 interface ProductTileProps {
-    productId: number; // productId muss vom Typ 'number' sein
+    productId: number;
 }
 
 const ProductTile: React.FC<ProductTileProps> = ({ productId }) => {

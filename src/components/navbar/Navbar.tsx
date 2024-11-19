@@ -35,7 +35,7 @@ const Navbar = () => {
                 <div className={styles.navbarTextContainer}>
                     {navData.map((item) =>
                         <Link
-                            key={item.category} // Ensure each key is unique
+                            key={item.category}
                             to={`${item.category.toLowerCase()}`}
                             className={styles.navbarText}
                             onMouseEnter={() => setCategory(item.category)}

@@ -1,5 +1,3 @@
-//import styles from './ProductTile.module.css';
-
 import { Link } from "react-router-dom";
 
 
