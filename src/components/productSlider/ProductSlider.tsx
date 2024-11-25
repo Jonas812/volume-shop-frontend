@@ -1,6 +1,6 @@
 import styles from './ProductSlider.module.css';
 import ProductTile from '../productTile/ProductTile';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import productService from '../../services/productService';
 
 const ProductSlider = () => {

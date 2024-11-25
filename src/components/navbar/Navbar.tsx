@@ -26,7 +26,7 @@ const Navbar = () => {
                 <div id={styles.logoContainer}>
                     <Link to="/">
                         <img src="./volume.svg"
-                            alt="volume"
+                            alt="voljon"
                             id={styles.logo}
                             onMouseEnter={() => setCategory(null)} />
                     </Link>

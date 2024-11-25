@@ -14,6 +14,12 @@
 }
 
 .socialBox {
+  display: flex;
+  gap: 10px;
+}
+
+.socialText {
+  font-weight: 600;
 }
 
 #leagalPageLinksConatainer {
@@ -21,8 +27,17 @@
   gap: 30px;
 }
 
+.leagalPageLink {
+  font-weight: 600;
+}
+
 #newsLetterConatainer {
   height: 200px;
   width: 100%;
   background-color: var(--primary);
+}
+
+#footerSchriftzug {
+  margin-top: 100px;
+  width: 100%;
 }
