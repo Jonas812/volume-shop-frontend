@@ -46,9 +46,11 @@ const ProductSlider = () => {
     return (
         <div id={styles.productSlider}>
             <img src="./arrowLeft.svg" alt="" onClick={handleLeftArrowClick} className={styles.icon}/>
-            {products.slice(shownProductIndex, shownProductIndex+4).map((product) => (
-                <ProductTile key={product.id} productId={product.id} />
-            ))}
+            <div className={styles.productSliderProducts}>
+                {products.slice(shownProductIndex, shownProductIndex+4).map((product) => (
+                    <ProductTile key={product.id} productId={product.id} productImage={product.cover}/>
+                ))}
+            </div>
             <img src="./arrowRight.svg" alt="" onClick={handleRightArrowClick} className={styles.icon} />
         </div>
     );

@@ -1,9 +1,8 @@
 .headerContainer {
   overflow: hidden;
   position: fixed;
-  z-index: 1000;
+  z-index: 11;
   width: 100%;
-  display: inline-block;
   top: 0;
 }
 
@@ -15,6 +14,7 @@
   align-items: center;
 
   padding: 0 30px;
+  z-index: 12;
 }
 
 #logoContainer {
@@ -87,9 +87,21 @@
   border-bottom: 1px solid var(--text);
   padding: 0 30px;
   background-color: var(--background);
+  position: absolute;
 
   width: 100%;
-  z-index: 10000;
+  z-index: 10;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeIn 0.05s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    position: relative;
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .kategoriesBox {

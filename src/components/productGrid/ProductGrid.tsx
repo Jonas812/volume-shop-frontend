@@ -51,7 +51,7 @@ const ProductsGrid = () => {
             </div>
             <div id={styles.productsGrid}>
                 {products.map((product) => (
-                    <ProductTile key={product.id} productId={product.id} />
+                    <ProductTile key={product.id} productId={product.id} productImage={product.cover} />
                 ))}
             </div>
         </div>
