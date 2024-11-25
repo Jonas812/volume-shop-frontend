@@ -1,0 +1,28 @@
+#footerContainer {
+  margin-top: 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+#socialsContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.socialBox {
+}
+
+#leagalPageLinksConatainer {
+  display: flex;
+  gap: 30px;
+}
+
+#newsLetterConatainer {
+  height: 200px;
+  width: 100%;
+  background-color: var(--primary);
+}

@@ -1,4 +1,4 @@
-import styles from './ProductsGrid.module.css';
+import styles from './ProductGrid.module.css';
 import ProductTile from '../productTile/ProductTile';
 import { useEffect, useState } from 'react';
 import productService from '../../services/productService';

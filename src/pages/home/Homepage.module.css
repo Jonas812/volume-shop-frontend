@@ -4,13 +4,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  height: 1000px;
+  height: 70vh;
 }
 
 .bannerOverlay {
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
   transition: opacity 0.3s;
   opacity: 0;
   pointer-events: none;
@@ -30,7 +29,8 @@
 }
 
 .shippingBannerContainer:hover {
-  height: 90px;
+  height: 80px;
+  margin-bottom: -10px;
 }
 
 .shippingBanner {
@@ -49,8 +49,4 @@
 #smallerText {
   font-size: 12px;
   font-weight: 500;
-}
-
-.test {
-  height: 1000px;
 }

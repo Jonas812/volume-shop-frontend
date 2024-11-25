@@ -1,4 +1,5 @@
 import styles from "./Homepage.module.css"
+import ProductSlider from "../../components/productSlider/ProductSlider"
 
 function Homepage() {
   
@@ -13,7 +14,7 @@ function Homepage() {
                 <p id={styles.smallerText}>Mindestbestellwert 20€</p>
             </div>
         </div>
-        <div className={styles.test}/>
+        <ProductSlider></ProductSlider>
       </>
     )
   }

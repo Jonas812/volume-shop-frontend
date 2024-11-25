@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 
 const navData = [
     {
-        category: "MEN",
+        category: "Men",
         subCategories: ["New Arrivals", "Jackets", "Knit", "Shirts", "Pants"],
     },
     {
-        category: "WOMEN",
+        category: "Women",
         subCategories: ["New Arrivals", "Jackets", "Knit", "Tops", "Pants", "Dresses"],
     },
     {
-        category: "ACCESSOIRES",
+        category: "Accessoires",
         subCategories: ["Bags", "Headwear", "Jewelry"],
     },
 ];
@@ -40,7 +40,7 @@ const Navbar = () => {
                             className={styles.navbarText}
                             onMouseEnter={() => setCategory(item.category)}
                         >
-                            {item.category}
+                            {item.category.toUpperCase()}
                         </Link>
                     )}
 
