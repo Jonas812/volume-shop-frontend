@@ -12,11 +12,12 @@ function Homepage() {
             <span className={styles.lightHeaderText} id={styles.collectionBannerHeader}>Lookbook</span>
               <span className={styles.lightRegularText} id={styles.collectionBannerText}>Winter 2024</span>
            
+              <div id={styles.buttonBox}>
+                <button className={styles.accentButton}>MEN</button>
+                <button className={styles.accentButton}>WOMEN</button>
+              </div>
             </div>
-            <div id={styles.buttonBox}>
-              <button className={styles.accentButton}>MEN</button>
-              <button className={styles.accentButton}>WOMEN</button>
-            </div>
+
           </div>
         </div> 
 
