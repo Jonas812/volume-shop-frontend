@@ -1,23 +1,80 @@
 .banner {
+  top: 0;
   background-image: url(./banner.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   height: 70vh;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.bannerOverlay {
-  height: 100%;
+.lightHeaderText {
+  font-weight: 600;
+  font-size: 64px;
+  color: var(--background);
+}
+
+.lightRegularText {
+  font-weight: 300;
+  font-size: 32px;
+  color: var(--background);
+}
+
+#bannerTextBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#collectionBannerHeader {
+  margin-bottom: -10px;
+}
+
+#innerBannerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000070;
   width: 100%;
-  transition: opacity 0.3s;
+  height: 100%;
+  gap: 60px;
+
   opacity: 0;
-  pointer-events: none;
+  visibility: hidden;
+  transition: opacity 0.15s ease-out, visibility 0.2s ease-out;
 }
 
-.banner:hover .bannerOverlay {
+#buttonBox {
+  display: flex;
+  gap: 30px;
+}
+
+.accentButton {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  color: var(--text);
+  padding: 10px;
+  width: 50%;
+  font-weight: 600;
+  font-size: 16px;
+  width: 200px;
+}
+
+.accentButton:hover {
+  filter: brightness(80%);
+}
+
+.banner:hover #innerBannerContainer {
   opacity: 1;
-  pointer-events: auto;
+  visibility: visible;
 }
 
 .shippingBannerContainer {
@@ -36,16 +93,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-.shippingBanner p {
-  align-self: center;
-  font-weight: 700;
-  font-size: 14px;
-  margin: 0;
-}
-
-#smallerText {
+.smallText {
   font-size: 12px;
   font-weight: 500;
+}
+
+.regularText {
+  font-weight: 700;
+  font-size: 14px;
 }
