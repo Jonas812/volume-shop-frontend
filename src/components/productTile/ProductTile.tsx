@@ -14,7 +14,7 @@ const ProductTile: React.FC<ProductTileProps> = ({ productId, productImage }) =>
     const randomOpacity = generateRandomOpacity();
 
     return (
-        <div>
+        <div id={styles.outerContainer}>
             {imgError ? (
                 <div
                     className={styles.placeholderStyle}

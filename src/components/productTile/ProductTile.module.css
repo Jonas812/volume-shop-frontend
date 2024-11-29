@@ -4,6 +4,10 @@
   background-color: #bdac9e;
 }
 
+#outerContainer:hover {
+  cursor: pointer;
+}
+
 #productInformationContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
