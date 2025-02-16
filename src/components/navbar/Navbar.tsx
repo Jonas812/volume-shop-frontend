@@ -3,18 +3,18 @@ import styles from './Navbar.module.css';
 import { Link } from 'react-router-dom';
 
 const navData = [
-    {
-        category: "Men",
-        subCategories: ["New Arrivals", "Jackets", "Knit", "Shirts", "Pants"],
+    {   
+        category: "Furniture",
+        subCategories: ["New Arrivals", "Lounge Chairs", "Lounge Tables", "Sideboards"],
     },
     {
-        category: "Women",
-        subCategories: ["New Arrivals", "Jackets", "Knit", "Tops", "Pants", "Dresses"],
+        category: "Decoration",
+        subCategories: ["New Arrivals", "Mirrors", "Vases", "Candles", "Wall Decoration"],
     },
     {
-        category: "Accessoires",
-        subCategories: ["Bags", "Headwear", "Jewelry"],
-    },
+        category: "Lamps",
+        subCategories: ["New Arrivals", "Floor Lamps", "Table Lamps"],
+    }
 ];
 
 const Navbar = () => {

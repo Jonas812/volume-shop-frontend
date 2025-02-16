@@ -4,18 +4,18 @@ import styles from './ProductTile.module.css';
 interface ProductTileProps {
     productId: number;
     productImage: string;
+    productName: String;
 }
 
-const ProductTile: React.FC<ProductTileProps> = ({ productId, productImage }) => {
-    const [imgError, setImgError] = useState(false);
+const ProductTile: React.FC<ProductTileProps> = ({ productId, productImage, productName }) => {
 
-    const generateRandomOpacity = () => Math.random() * 0.5 + 0.5; // Opacity between 0.5 and 1
+    const generateRandomOpacity = () => Math.random() * 0.5 + 0.5;
 
     const randomOpacity = generateRandomOpacity();
 
     return (
         <div id={styles.outerContainer}>
-            {imgError ? (
+            {!productImage ? (
                 <div
                     className={styles.placeholderStyle}
                     style={{
@@ -26,15 +26,12 @@ const ProductTile: React.FC<ProductTileProps> = ({ productId, productImage }) =>
                 <img
                     src={productImage}
                     id={styles.productTileContainer}
-                    onError={() => setImgError(true)}
                     alt="Product"
                 />
             )}
             <div id={styles.productInformationContainer}>
-                <span>{productId}</span>
-                <span className={styles.productInformationRight}>332gs/m</span>
-                <span>Winter 2023</span>
-                <span className={styles.productInformationRight}>90€</span>
+                <span>{productName}</span>
+                <span className={styles.productInformationRight}>{productId}</span>
             </div>
         </div>
     );

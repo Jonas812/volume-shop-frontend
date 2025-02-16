@@ -10,15 +10,13 @@ function Homepage() {
         <div className={styles.banner}>
           <div id={styles.innerBannerContainer}>
             <div id={styles.bannerTextBox}>
-              <span className={styles.lightHeaderText} id={styles.collectionBannerHeader}>Lookbook</span>
+              <span className={styles.lightHeaderText} id={styles.collectionBannerHeader}>New Arrivals</span>
               <span className={styles.lightRegularText} id={styles.collectionBannerText}>Winter 2024</span>
            
               <div id={styles.buttonBox}>
-              <Link className={styles.link} to="/men">
-                <button className={styles.accentButton}>MEN</button>
-              </Link>
-              <Link className={styles.link} to="/women">
-                <button className={styles.accentButton}>WOMEN</button>
+              <Link className={styles.link} to="/">
+                <button className={styles.accentButton}>
+                Watch here</button>
               </Link>
               </div>
             </div>

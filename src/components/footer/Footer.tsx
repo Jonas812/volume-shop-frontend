@@ -27,7 +27,7 @@ const Footer = () => {
                 <span className={styles.leagalPageLink}>COMPLIANCE</span>
                 <span className={styles.leagalPageLink}>FAQ</span>
                 <span className={styles.leagalPageLink}>KONTAKT</span>
-                <span className={styles.leagalPageLink}>©2024 voljon</span>
+                <span className={styles.leagalPageLink}>©2024 volume</span>
             </div>
             <img src="footerSchriftzug.svg" alt="" id={styles.footerSchriftzug} />
         </div>
